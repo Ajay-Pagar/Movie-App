@@ -7,6 +7,7 @@ import { GoogleAuthProvider, getRedirectResult } from "firebase/auth/cordova";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_URL } from "../utils/constant";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -93,11 +94,7 @@ const Login = () => {
     <div className="h-screen">
       <Header />
       <div className="absolute w-full">
-        <img
-          className="h-screen w-full"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/41c789f0-7df5-4219-94c6-c66fe500590a/3149e5eb-4660-4e3d-9e65-b1e615229c64/IN-en-20240513-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt="background"
-        />
+        <img className="h-screen w-full" src={BG_URL} alt="background" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
