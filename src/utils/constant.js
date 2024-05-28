@@ -23,3 +23,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+// this API is not free after some time it may be not accessible after specific time
+export const OPENAI_KEY = "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";
