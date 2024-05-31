@@ -10,9 +10,9 @@ const VideoTitle = ({ title, overview }) => {
   const description = showFullDescription ? overview : overview.slice(0, 160);
 
   return (
-    <div className="md:w-screen md:h-screen pt-[18%] md:px-16 absolute bg-gradient-to-r from-black">
+    <div className="md:w-screen md:h-screen md:pt-[18%] pt-[60%] px-10 md:px-16 absolute bg-gradient-to-r from-black">
       <h1 className="text-xl font-bold text-white md:text-3xl">{title}</h1>
-      <p className="text-sm pt-5 w-3/12 text-white md:text-lg mb-4">
+      <p className="text-sm pt-60 md:pt-5 md:w-3/12 text-white md:text-lg mb-4">
         {description}
       </p>
       {/* <span className="text-white mb-4" onClick={showFullDescriptionHandler}>
