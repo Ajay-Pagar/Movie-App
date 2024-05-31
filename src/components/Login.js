@@ -94,13 +94,17 @@ const Login = () => {
     <div className="h-screen">
       <Header />
       <div className="absolute w-full">
-        <img className="h-screen w-full" src={BG_URL} alt="background" />
+        <img
+          className="h-screen w-full object-cover"
+          src={BG_URL}
+          alt="background"
+        />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-3/12 bg-black mx-auto right-0 left-0 my-36 p-12 text-white rounded-xl bg-opacity-80"
+        className="absolute md:w-3/12 w-4/5 bg-black mx-auto right-0 left-0 my-36 p-12 text-white rounded-xl bg-opacity-80"
       >
-        <h1 className="font-bold text-3xl py-4">
+        <h1 className="font-bold md:text-3xl text-lg py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
@@ -108,30 +112,35 @@ const Login = () => {
             ref={userName}
             type="text"
             placeholder="Full Name"
-            className="p-2 m-2 w-full bg-gray-800"
+            className="p-2 m-2 w-full bg-gray-800 text-sm md:text-lg rounded-md"
           />
         )}
         <input
           ref={email}
           type="text"
           placeholder="Email Address"
-          className="p-2 m-2 w-full bg-gray-800"
+          className="p-2 m-2 w-full bg-gray-800 text-sm md:text-lg rounded-md"
         />
 
         <input
           ref={password}
           type="password"
           placeholder="Password"
-          className="p-2 m-2 w-full bg-gray-800"
+          className="p-2 m-2 w-full bg-gray-800 text-sm md:text-lg rounded-md"
         />
-        <p className="text-red-500 font-bold text-lg py-2">{errorMessage}</p>
+        <p className="text-red-500 font-bold py-2 text-sm md:text-lg">
+          {errorMessage}
+        </p>
         <button
-          className="p-2 mt-4 m-2 bg-red-700 w-full rounded-lg"
+          className="p-2 mt-4 m-2 bg-red-700 w-full rounded-lg text-sm md:text-lg"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        <p className="py-8 cursor-pointer" onClick={toggleSignInForm}>
+        <p
+          className="py-8 cursor-pointer text-sm md:text-lg"
+          onClick={toggleSignInForm}
+        >
           {isSignInForm
             ? " New to Cinema? Sign Up Now"
             : "Already registered? Sign In Now."}

@@ -30,9 +30,9 @@ const SearchBar = () => {
   // Promise.All -> return the array of promises
 
   return (
-    <div className="pt-[8%] flex justify-center ">
+    <div className="md:pt-[8%] flex justify-center pt-[35%]">
       <form
-        className="bg-black w-1/2 grid grid-cols-12 rounded-lg"
+        className="bg-black w-full md:w-1/2 grid grid-cols-12 rounded-lg fixed text-sm md:text-xl"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
@@ -42,7 +42,7 @@ const SearchBar = () => {
           placeholder={lang[langKey].searchPlaceholder}
         />
         <button
-          className="col-span-3 m-4 py-2 px-4 bg-red-700 text-white rounded-lg"
+          className="col-span-3 m-4 py-2 md:px-4 px-2 bg-red-700 text-white rounded-lg"
           onClick={handleSearchClick}
         >
           {lang[langKey].search}

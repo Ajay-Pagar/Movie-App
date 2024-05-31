@@ -28,10 +28,10 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed w-full px-8 py-4 bg-gradient-to-b from-black z-50 flex justify-between">
-      <img className="w-52" src={APP_LOGO} alt="app logo" />
+    <div className="fixed w-full px-8 py-4 bg-gradient-to-b from-black z-50 flex flex-col md:flex-row justify-between">
+      <img className="w-52 mx-auto md:mx-0" src={APP_LOGO} alt="app logo" />
       {user && (
-        <div className="flex">
+        <div className="flex mt-4 py-2 md:mt-0 md:p-0 text-sm md:text-xl">
           {showSearch && (
             <select
               className="mr-4 p-2 rounded-lg bg-transparent text-white border border-white"

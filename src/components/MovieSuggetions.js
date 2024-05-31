@@ -9,12 +9,12 @@ const MovieSuggetions = () => {
   if (!movieResults) return null;
 
   return (
-    <div className="flex overflow-x-scroll p-4 m-4 mt-20 bg-black text-white opacity-90">
+    <div className="flex overflow-x-scroll p-4 md:m-4 md:mt-32 mt-32 bg-black text-white opacity-90">
       <div className="flex">
         {movieResults.map((movie) =>
           movie.poster_path ? (
             <div>
-              <h1 className="text-xl font-bold p-2 text-center h-[66px]">
+              <h1 className="md:text-xl text-sm font-bold p-2 text-center md:h-[66px] h-[30px]">
                 {movie.original_title}
               </h1>
               <MovieCard key={movie.id} posterPath={movie.poster_path} />

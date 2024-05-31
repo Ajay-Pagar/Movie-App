@@ -5,13 +5,19 @@ import { BG_URL } from "../utils/constant";
 
 const Search = () => {
   return (
-    <div>
+    <>
       <div className="fixed w-full -z-10">
-        <img className="h-screen w-full" src={BG_URL} alt="background" />
+        <img
+          className="h-screen object-cover w-full"
+          src={BG_URL}
+          alt="background"
+        />
       </div>
-      <SearchBar />
-      <MovieSuggetions />
-    </div>
+      <div>
+        <SearchBar />
+        <MovieSuggetions />
+      </div>
+    </>
   );
 };
 
