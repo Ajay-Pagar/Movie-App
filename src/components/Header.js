@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-full px-8 py-4 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="fixed w-full px-8 py-4 bg-gradient-to-b from-black z-50 flex justify-between">
       <img className="w-52" src={APP_LOGO} alt="app logo" />
       {user && (
         <div className="flex">

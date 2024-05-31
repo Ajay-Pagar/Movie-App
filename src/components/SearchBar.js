@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import lang from "../utils/languageConstant";
 import { useDispatch, useSelector } from "react-redux";
-import openAi from "../utils/openAi";
 import { API_OPTIONS } from "../utils/constant";
 import { addSearchMovieResults } from "../utils/searchSlice";
 
 const SearchBar = () => {
-  // const [searchMovies, setSearchMovies] = useState("");
   const langKey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
   const dispatch = useDispatch();

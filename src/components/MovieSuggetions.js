@@ -9,16 +9,18 @@ const MovieSuggetions = () => {
   if (!movieResults) return null;
 
   return (
-    <div className="flex overflow-x-scroll p-4 m-4 mt-20 bg-black text-white opacity-80">
+    <div className="flex overflow-x-scroll p-4 m-4 mt-20 bg-black text-white opacity-90">
       <div className="flex">
-        {movieResults.map((movie) => (
-          <div>
-            <h1 className="text-xl font-bold p-2 text-center h-[66px]">
-              {movie.original_title}
-            </h1>
-            <MovieCard key={movie.id} posterPath={movie.poster_path} />
-          </div>
-        ))}
+        {movieResults.map((movie) =>
+          movie.poster_path ? (
+            <div>
+              <h1 className="text-xl font-bold p-2 text-center h-[66px]">
+                {movie.original_title}
+              </h1>
+              <MovieCard key={movie.id} posterPath={movie.poster_path} />
+            </div>
+          ) : null
+        )}
       </div>
     </div>
   );

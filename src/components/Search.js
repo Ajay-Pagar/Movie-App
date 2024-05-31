@@ -6,7 +6,7 @@ import { BG_URL } from "../utils/constant";
 const Search = () => {
   return (
     <div>
-      <div className="absolute w-full -z-10">
+      <div className="fixed w-full -z-10">
         <img className="h-screen w-full" src={BG_URL} alt="background" />
       </div>
       <SearchBar />
